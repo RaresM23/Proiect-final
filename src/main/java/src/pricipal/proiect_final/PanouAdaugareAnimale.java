@@ -20,7 +20,7 @@ public class PanouAdaugareAnimale extends JPanel {
         PanouAdaugareAnimale() {
 
         	try {
-                backgroundImage = ImageIO.read(new File("D:\\Eclipse\\PetShop\\PanouAdaugareAnimaleBackground.jpg"));
+                backgroundImage = ImageIO.read(new File("D:\\Eclipse\\proiect final\\proiect-final\\PanouAdaugareAnimaleBackground.jpg"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
