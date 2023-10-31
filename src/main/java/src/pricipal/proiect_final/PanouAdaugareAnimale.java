@@ -54,19 +54,19 @@ public class PanouAdaugareAnimale extends JPanel {
 		this.add(txtRasa);
 		this.add(txtVarsta);
 	    
-		butonOK.setBounds(10,160,100,20);
-		butonAnuleaza.setBounds(120,160,100,20);
+		butonOK.setBounds(290,300,100,20);
+		butonAnuleaza.setBounds(400,300,100,20);
 		
-		etichetaDepartamentAdugareAnimale.setBounds(55,10,150,20);
-		etichetaNume.setBounds(10,40,100,20);
-		etichetaCainePisica.setBounds(10,70,100,20);
-		etichetaRasa.setBounds(10,100,100,20);
-		etichetaVarsta.setBounds(10,130,100,20);
+		etichetaDepartamentAdugareAnimale.setBounds(320,150,150,20);
+		etichetaNume.setBounds(290,180,100,20);
+		etichetaCainePisica.setBounds(290,210,100,20);
+		etichetaRasa.setBounds(290,240,100,20);
+		etichetaVarsta.setBounds(290,270,100,20);
 		
-		txtNume.setBounds(120,40,100,20);
-		txtCainePisica.setBounds(120,70,100,20);
-		txtRasa.setBounds(120,100,100,20);
-		txtVarsta.setBounds(120,130,100,20);
+		txtNume.setBounds(400,180,100,20);
+		txtCainePisica.setBounds(400,210,100,20);
+		txtRasa.setBounds(400,240,100,20);
+		txtVarsta.setBounds(400,270,100,20);
 		
 		
 		butonAnuleaza.addActionListener(new ActionListener() {
