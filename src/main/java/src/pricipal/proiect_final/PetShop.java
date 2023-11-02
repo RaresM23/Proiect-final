@@ -20,8 +20,6 @@ public class PetShop {
 	static MongoCollection<Document> col = db.getCollection("conturi");
 	
 	List<Document> dateBD = new ArrayList<>();
-	
-    
     
     public static void main(String[] args) {
 

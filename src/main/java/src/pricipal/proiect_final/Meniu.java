@@ -24,10 +24,6 @@ public class Meniu extends JFrame implements ActionListener{
     
     public Meniu() {
     	
-    	
-
-        
-    	
     	cadru.setVisible(true);
     	cadru.setSize(800, 600);
     	cadru.setLocationRelativeTo(null);
@@ -73,4 +69,3 @@ public class Meniu extends JFrame implements ActionListener{
 			}
 	}
 }
-
