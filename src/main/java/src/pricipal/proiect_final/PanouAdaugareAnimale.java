@@ -40,7 +40,7 @@ public class PanouAdaugareAnimale extends JPanel {
         PanouAdaugareAnimale() {
 
         	try {
-                backgroundImage = ImageIO.read(new File("D:\\Eclipse\\proiect final\\proiect-final\\caine.jpg"));
+                backgroundImage = ImageIO.read(new File("C:\\Users\\scorp\\an\\poo\\pfinal\\Proiect-final-master\\caine.jpg"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -122,8 +122,8 @@ public class PanouAdaugareAnimale extends JPanel {
 				JOptionPane.showMessageDialog(null, "Completeaza toate spatiile!!!");
 				}else {
 					doc.append("Nume", nume);
-					doc.append("Tip animal", caiPis);
-					doc.append("Rasa:", rasa);
+					doc.append("Caine/Pisica", caiPis);
+					doc.append("Rasa", rasa);
 					doc.append("Varsta", varsta);
 					
 						col.insertOne(doc);

@@ -3,35 +3,40 @@ package src.pricipal.proiect_final;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
-
-import com.mongodb.client.FindIterable;
+import com.mongodb.MongoException;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.result.DeleteResult;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PanouAdoptieAnimale extends JPanel {
+	
 
-	static MongoClient client = MongoClients.create("mongodb+srv://Dumi:0ok9ij8uh@cluster0.ytjeywp.mongodb.net/?retryWrites=true&w=majority");
-	
-	static MongoDatabase db = client.getDatabase("PetShop");
-	
-	static MongoCollection<Document> colA = db.getCollection("animale");
-	
-    private JTable table;
+    static MongoClient client = MongoClients.create("mongodb+srv://Dumi:0ok9ij8uh@cluster0.ytjeywp.mongodb.net/?retryWrites=true&w=majority");
+    static MongoDatabase db = client.getDatabase("PetShop");
+    static MongoCollection<Document> colA = db.getCollection("animale");
     private DefaultTableModel tableModel;
     private JButton refresh = new JButton("Refresh");
+    private JTable table = new JTable(tableModel);
 
-    public static List<Document> dataFetchA(){
+    public JTable getTable(JTable table) {
+    	return this.table = table;
+    }
+    
+    public static List<Document> dataFetchA() {
         List<Document> dateBD = new ArrayList<>();
         MongoCursor<Document> cursor = colA.find().iterator();
         while (cursor.hasNext()) {
@@ -39,28 +44,26 @@ public class PanouAdoptieAnimale extends JPanel {
         }
         return dateBD;
     }
-    
+
     public PanouAdoptieAnimale() {
-        // Create the table model with column names
-        tableModel = new DefaultTableModel();
+    	tableModel = new DefaultTableModel();
         tableModel.addColumn("Nume");
         tableModel.addColumn("Caine/Pisica");
         tableModel.addColumn("Rasa");
         tableModel.addColumn("Varsta");
+       
 
         table = new JTable(tableModel);
 
         JScrollPane scrollPane = new JScrollPane(table);
         this.add(scrollPane);
-       
+
         refresh.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Call the updateTableData method to refresh the table data
                 updateTableData();
             }
         });
-
         this.add(refresh);
         updateTableData();
     }
@@ -70,10 +73,8 @@ public class PanouAdoptieAnimale extends JPanel {
         tableModel.setRowCount(0);
 
         // Fetch data from the MongoDB collection
-       
         List<Document> date = dataFetchA();
 
-        
         DefaultTableModel dataModel = (DefaultTableModel) table.getModel();
         // Populate the table with data
         for (Document doc : date) {
@@ -81,12 +82,11 @@ public class PanouAdoptieAnimale extends JPanel {
             Object cainePisica = doc.get("Caine/Pisica");
             Object rasa = doc.get("Rasa");
             Object varsta = doc.get("Varsta");
-            Object[] rowData = new Object[]{nume, cainePisica, rasa, varsta};
+            Object[] rowData = new Object[]{nume, cainePisica, rasa, varsta, "Adopt"};
             dataModel.addRow(rowData);
-            //System.out.println(nume + cainePisica + rasa + varsta);
-            System.out.println("DATE AFISATE IN TABEL");
         }
         table.setModel(dataModel);
     }
-    
+	
+   
 }

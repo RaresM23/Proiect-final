@@ -39,19 +39,15 @@ public class TabelAnimale extends AbstractTableModel {
     }
     
     public Document getDocumentById(String collectionName, String documentId) {
-        // Create a MongoClient and connect to your MongoDB server
+        
             MongoCollection<Document> collection = db.getCollection(collectionName);
-
-            // Convert the documentId to ObjectId
+          
             ObjectId objectId = new ObjectId(documentId);
-
-            // Search for the document by its _id field (ObjectId)
             Document query = new Document("_id", objectId);
 
-            // Find the document
+          
             FindIterable<Document> result = collection.find(query);
             Document document = result.first();
-
             return document;
         
     }
