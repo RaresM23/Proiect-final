@@ -3,7 +3,11 @@ package src.pricipal.proiect_final;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
+
 import javax.swing.*;
+
+import org.bson.Document;
 
 public class Meniu extends JFrame implements ActionListener{
 	
@@ -13,8 +17,16 @@ public class Meniu extends JFrame implements ActionListener{
 	private JFrame cadru = new JFrame();
 	private PanouAdaugareAnimale panouAdauagreAnimale = new PanouAdaugareAnimale();
     private PanouAdoptieAnimale panouAdoptieAnimale = new PanouAdoptieAnimale();
+    PetShop a = new PetShop();
+    List<Document> dateBD = a.dataFetch(); 
+    TabelAnimale modelTabel = new TabelAnimale(dateBD);
+    JTable tb = new JTable(modelTabel);
     
     public Meniu() {
+    	
+    	
+
+        
     	
     	cadru.setVisible(true);
     	cadru.setSize(800, 600);
@@ -42,7 +54,7 @@ public class Meniu extends JFrame implements ActionListener{
 		cadru.pack();
 		cadru.repaint();
     }
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == adaugare) {
@@ -60,6 +72,5 @@ public class Meniu extends JFrame implements ActionListener{
 			cadru.repaint();
 			}
 	}
-
 }
 

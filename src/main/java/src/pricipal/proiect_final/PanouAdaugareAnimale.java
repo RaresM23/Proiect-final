@@ -1,15 +1,35 @@
 package src.pricipal.proiect_final;
 
 import javax.swing.*;
+
+import org.bson.Document;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.imageio.ImageIO;
 
 public class PanouAdaugareAnimale extends JPanel {
+	
+	//Andrei - initializez colectia pentru animale
+	static MongoClient client = MongoClients.create("mongodb+srv://Dumi:0ok9ij8uh@cluster0.ytjeywp.mongodb.net/?retryWrites=true&w=majority");
+	
+	static MongoDatabase db = client.getDatabase("PetShop");
+	
+	static MongoCollection<Document> col = db.getCollection("animale");
+	
+	List<Document> dateBD = new ArrayList<>();
 	
 	JTextField txtNume = new JTextField();
     JTextField txtCainePisica = new JTextField();
@@ -17,10 +37,13 @@ public class PanouAdaugareAnimale extends JPanel {
     JTextField txtVarsta = new JTextField();
     private BufferedImage backgroundImage;
     
+    
+    	
+    
         PanouAdaugareAnimale() {
 
         	try {
-                backgroundImage = ImageIO.read(new File("D:\\Eclipse\\proiect final\\proiect-final\\PanouAdaugareAnimaleBackground.jpg"));
+                backgroundImage = ImageIO.read(new File("C:\\Users\\scorp\\an\\poo\\pfinal\\Proiect-final-master\\PanouAdaugareAnimaleBackground.jpg"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -68,6 +91,36 @@ public class PanouAdaugareAnimale extends JPanel {
 		txtRasa.setBounds(400,240,100,20);
 		txtVarsta.setBounds(400,270,100,20);
 		
+		butonOK.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent o) {
+				String nume = txtNume.getText();
+				String caiPis = txtCainePisica.getText();
+				String rasa = txtRasa.getText();
+				String varsta = txtVarsta.getText();
+				
+				Document doc = new Document();
+				if(nume.isEmpty() || caiPis.isEmpty() || rasa.isEmpty() || varsta.isEmpty()) {
+				JOptionPane.showMessageDialog(null, "Completeaza toate spatiile!!!");
+				}else {
+					doc.append("Nume", nume);
+					doc.append("Tip animal", caiPis);
+					doc.append("Rasa:", rasa);
+					doc.append("Varsta", varsta);
+					
+						col.insertOne(doc);
+				
+					txtNume.setText("");
+					txtCainePisica.setText("");
+					txtRasa.setText("");
+					txtVarsta.setText("");
+					
+					JOptionPane.showMessageDialog(null, "Animal inregistrat cu succes!!");
+						
+					}
+				}
+			
+			});
 		
 		butonAnuleaza.addActionListener(new ActionListener() {
 
