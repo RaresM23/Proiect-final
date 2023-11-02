@@ -21,12 +21,9 @@ public class PetShop {
 	
 	List<Document> dateBD = new ArrayList<>();
 	
-	
     private static String usernameCorect;
     private static String parolaCorecta;
 
-    
-    
     public static void main(String[] args) {
 
         Meniu meniulMeu = new Meniu();

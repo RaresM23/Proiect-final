@@ -78,7 +78,7 @@ public class PanouAdaugareAnimale extends JPanel {
 		butonOK.setBounds(200,340,190,35);
 		butonAnuleaza.setBounds(400,340,200,35);
 		
-		etichetaDepartamentAdugareAnimale.setBounds(220,100,400,45);
+		etichetaDepartamentAdugareAnimale.setBounds(210,100,400,45);
 		etichetaNume.setBounds(200,180,300,35);
 		etichetaCainePisica.setBounds(200,220,300,35);
 		etichetaRasa.setBounds(200,260,300,35);
