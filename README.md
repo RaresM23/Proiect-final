@@ -1,5 +1,5 @@
 # Proiect-final
-Proiectul este o aplicatie numita PetShop
+Proiectul este o aplicatie numita PetShop<br>
 Scopul aplicatiei este de a aduaga datele animalelor intr-o baza de date si de a le afisa intr-un tabel.
 Astfel clientiilor magazinului fiindule mult mai usor sa caute animalul dorit.
 Fiecare animal este stocat in baza de date cu informatiile urmatoare: Nume, Daca este caine sau pisica, Rasa si Varsta acestuia.
