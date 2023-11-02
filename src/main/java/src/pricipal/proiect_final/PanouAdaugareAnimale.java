@@ -37,19 +37,17 @@ public class PanouAdaugareAnimale extends JPanel {
     JTextField txtVarsta = new JTextField();
     private BufferedImage backgroundImage;
     
-    
-    	
-    
         PanouAdaugareAnimale() {
 
         	try {
-                backgroundImage = ImageIO.read(new File("C:\\Users\\scorp\\an\\poo\\pfinal\\Proiect-final-master\\PanouAdaugareAnimaleBackground.jpg"));
+                backgroundImage = ImageIO.read(new File("D:\\Eclipse\\proiect final\\proiect-final\\caine.jpg"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
         	
-        	
 		this.setLayout(null);
+		Font fontEtichete = new Font("Arial", Font.PLAIN, 30);
+		Font fontEtichetaTitlu = new Font("Arial", Font.BOLD, 40);
 		
 		JButton butonOK = new JButton("OK");
 		JButton butonAnuleaza = new JButton("Anuleaza");
@@ -77,19 +75,39 @@ public class PanouAdaugareAnimale extends JPanel {
 		this.add(txtRasa);
 		this.add(txtVarsta);
 	    
-		butonOK.setBounds(290,300,100,20);
-		butonAnuleaza.setBounds(400,300,100,20);
+		butonOK.setBounds(200,340,190,35);
+		butonAnuleaza.setBounds(400,340,200,35);
 		
-		etichetaDepartamentAdugareAnimale.setBounds(320,150,150,20);
-		etichetaNume.setBounds(290,180,100,20);
-		etichetaCainePisica.setBounds(290,210,100,20);
-		etichetaRasa.setBounds(290,240,100,20);
-		etichetaVarsta.setBounds(290,270,100,20);
+		etichetaDepartamentAdugareAnimale.setBounds(220,100,400,45);
+		etichetaNume.setBounds(200,180,300,35);
+		etichetaCainePisica.setBounds(200,220,300,35);
+		etichetaRasa.setBounds(200,260,300,35);
+		etichetaVarsta.setBounds(200,300,300,35);
 		
-		txtNume.setBounds(400,180,100,20);
-		txtCainePisica.setBounds(400,210,100,20);
-		txtRasa.setBounds(400,240,100,20);
-		txtVarsta.setBounds(400,270,100,20);
+		txtNume.setBounds(400,180,200,30);
+		txtCainePisica.setBounds(400,220,200,30);
+		txtRasa.setBounds(400,260,200,30);
+		txtVarsta.setBounds(400,300,200,30);
+		
+		etichetaDepartamentAdugareAnimale.setFont(fontEtichetaTitlu);
+		etichetaNume.setFont(fontEtichete);
+		etichetaCainePisica.setFont(fontEtichete);
+		etichetaRasa.setFont(fontEtichete);
+		etichetaVarsta.setFont(fontEtichete);
+		
+		etichetaDepartamentAdugareAnimale.setForeground(Color.white);
+		etichetaNume.setForeground(Color.white);
+		etichetaCainePisica.setForeground(Color.white);
+		etichetaRasa.setForeground(Color.white);
+		etichetaVarsta.setForeground(Color.white);
+		
+		butonOK.setFont(fontEtichete);
+		butonAnuleaza.setFont(fontEtichete);
+		
+		txtNume.setFont(fontEtichete);
+		txtCainePisica.setFont(fontEtichete);
+		txtRasa.setFont(fontEtichete);
+		txtVarsta.setFont(fontEtichete);
 		
 		butonOK.addActionListener(new ActionListener(){
 			@Override
@@ -119,7 +137,6 @@ public class PanouAdaugareAnimale extends JPanel {
 						
 					}
 				}
-			
 			});
 		
 		butonAnuleaza.addActionListener(new ActionListener() {
@@ -132,9 +149,7 @@ public class PanouAdaugareAnimale extends JPanel {
 				txtRasa.setText("");
 				txtVarsta.setText("");
 			}
-			
 		});
-		
 	}
 
         @Override
@@ -142,7 +157,5 @@ public class PanouAdaugareAnimale extends JPanel {
             super.paintComponent(g);
             g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
         }   
-        
-        
 }
 
