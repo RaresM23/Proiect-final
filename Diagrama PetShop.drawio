@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2023-11-03T07:18:18.376Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0 (Edition std-1)" etag="90gswhxtAvmPVAC7jN2W" version="21.5.0" type="device">
+  <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
+    <mxGraphModel dx="1469" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="D9r255baj6HLfHeKH9Wj-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.039;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="D9r255baj6HLfHeKH9Wj-41" target="D9r255baj6HLfHeKH9Wj-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-41" value="PanouAdoptieAnimale" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="110" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-42" value="&lt;div&gt;- client: MongoClient&lt;/div&gt;&lt;div&gt;- db: MongoDatabase&lt;/div&gt;&lt;div&gt;- colA: MongoCollection&amp;lt;Document&amp;gt;&lt;/div&gt;&lt;div&gt;- tableModel: DefaultTableModel&lt;/div&gt;&lt;div&gt;- table: JTable&lt;/div&gt;&lt;div&gt;- refresh: JButton&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-41">
+          <mxGeometry y="26" width="250" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-43" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-41">
+          <mxGeometry y="120" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-44" value="&lt;div&gt;+getTable(JTable table): JTable&amp;nbsp;&lt;/div&gt;&lt;div&gt;+dataFetchA(): List&amp;lt;Document&amp;gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;+updateTableData()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-41">
+          <mxGeometry y="128" width="250" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.84;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="D9r255baj6HLfHeKH9Wj-45" target="D9r255baj6HLfHeKH9Wj-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-45" value="TabelAnimale" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="210" width="240" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-46" value="- client: MongoClient&lt;br&gt;- db: MongoDatabase&lt;br&gt;- col: MongoCollection&amp;lt;Document&amp;gt;&lt;br&gt;- date: List&amp;lt;Document&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-45">
+          <mxGeometry y="26" width="240" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-47" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-45">
+          <mxGeometry y="100" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-48" value="+getRowCount(): int&lt;br&gt;+getColumnCount(): int&lt;br&gt;+getDocumentById(String collectionName, +String documentId): Document&lt;br&gt;+getColumnName(int column): String&lt;br&gt;+getValueAt(int row, int column): Object" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-45">
+          <mxGeometry y="108" width="240" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-50" value="PetShop" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="80" width="280" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-51" value="&lt;div&gt;-client: MongoClient&lt;/div&gt;&lt;div&gt;-db: MongoDatabase&lt;/div&gt;&lt;div&gt;-col: MongoCollection&amp;lt;Document&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-50">
+          <mxGeometry y="26" width="280" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-52" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-50">
+          <mxGeometry y="80" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-53" value="&lt;div&gt;+main(String[] args: void&lt;/div&gt;&lt;div&gt;+dataFetch(): List&amp;lt;Document&amp;gt;&lt;/div&gt;&lt;div&gt;+isValidUser(String enteredUsername, String +enteredPassword, List&amp;lt;Document&amp;gt; date): boolean&lt;/div&gt;&lt;div&gt;+dataFetchUsername(): String&lt;/div&gt;&lt;div&gt;+dataFetchPassword(): String&lt;/div&gt;&lt;div&gt;+signIn(): void&lt;/div&gt;&lt;div&gt;+inserareCont(String username, String parola): void&lt;/div&gt;&lt;div&gt;+createAccount(): void&lt;/div&gt;&lt;div&gt;+afisareMeniu(): int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-50">
+          <mxGeometry y="88" width="280" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-54" value="PanouAdaugareAnimale" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="463" width="200" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-55" value="&lt;div&gt;-client: MongoClient&lt;/div&gt;&lt;div&gt;-db: MongoDatabase&lt;/div&gt;&lt;div&gt;-col: MongoCollection&amp;lt;Document&amp;gt;&lt;/div&gt;&lt;div&gt;+txtNume: JTextField&lt;/div&gt;&lt;div&gt;+txtCainePisica: JTextField&lt;/div&gt;&lt;div&gt;+txtRasa: JTextField&lt;/div&gt;&lt;div&gt;+txtVarsta: JTextField&lt;/div&gt;&lt;div&gt;-backgroundImage: BufferedImage&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-54">
+          <mxGeometry y="26" width="200" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-56" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-54">
+          <mxGeometry y="150" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-57" value="&lt;div&gt;+PanouAdaugareAnimale()&lt;/div&gt;&lt;div&gt;+PanouAdaugareAnimale(String, +String, String, String, String)&lt;/div&gt;&lt;div&gt;+initializeUI()&lt;/div&gt;&lt;div&gt;+paintComponent(Graphics g: v&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-54">
+          <mxGeometry y="158" width="200" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="D9r255baj6HLfHeKH9Wj-58" target="D9r255baj6HLfHeKH9Wj-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-58" value="Meniu" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="413" width="290" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-59" value="&lt;div&gt;-baraMeniu: JMenuBar&amp;nbsp;&lt;/div&gt;&lt;div&gt;-meniu: JMenu&amp;nbsp;&lt;/div&gt;&lt;div&gt;-adaugare: JMenuItem&amp;nbsp;&lt;/div&gt;&lt;div&gt;-adoptie: JMenuItem&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;-cadru: JFrame&amp;nbsp;&lt;/div&gt;&lt;div&gt;-panouAdauagreAnimale: PanouAdaugareAnimale&amp;nbsp;&lt;/div&gt;&lt;div&gt;-panouAdoptieAnimale: PanouAdoptieAnimale&amp;nbsp;&lt;/div&gt;&lt;div&gt;+a: PetShop&amp;nbsp;&lt;/div&gt;&lt;div&gt;+dateBD: List&amp;lt;Document&amp;gt;&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-58">
+          <mxGeometry y="26" width="290" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-60" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-58">
+          <mxGeometry y="170" width="290" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-61" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="D9r255baj6HLfHeKH9Wj-58">
+          <mxGeometry y="178" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="D9r255baj6HLfHeKH9Wj-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="D9r255baj6HLfHeKH9Wj-55" target="D9r255baj6HLfHeKH9Wj-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
